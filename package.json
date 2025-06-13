@@ -1,0 +1,12 @@
+{
+    "name": "com.deathbygravitystudio.behaviour.tree",
+    "version": "0.1.0",
+    "displayName": "Behaviour Tree",
+    "description": "Behaviour tree implementation",
+    "dependencies": {
+        "com.deathbygravitystudio.behaviour.vars": "0.1.0"
+    },
+    "author": {
+        "name": "Death By Gravity Studio"
+    }
+}

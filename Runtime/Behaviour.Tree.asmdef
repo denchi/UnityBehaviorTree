@@ -1,0 +1,4 @@
+{
+    "name": "Behaviour.Tree",
+    "references": ["Behaviour.Vars"]
+}
