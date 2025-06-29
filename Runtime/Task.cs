@@ -1,18 +1,17 @@
 ﻿using UnityEngine;
 using Behaviours.BT.Runtime;
-using Sirenix.OdinInspector;
 
 namespace Behaviours.BT
 {
     public class Task : ScriptableObject
     {
-        [ToggleGroup(nameof(debugBreak), "Debug")]
+        [SerializeField]
         public bool debugBreak;
         
-        [ToggleGroup(nameof(debugBreak))]
+        [SerializeField]
         public State debugBreakCondition = State.Failed;
 
-        [LabelText("Task"), PropertySpace]
+        [SerializeField]
         public Node node;
 
         public virtual string Subtitle => "";

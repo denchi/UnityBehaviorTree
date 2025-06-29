@@ -2,7 +2,6 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
-using Sirenix.Utilities;
 
 namespace Behaviours.BT.Editor
 {
@@ -114,7 +113,7 @@ namespace Behaviours.BT.Editor
                     return;
                 }
 
-                if (!task.nodes.IsNullOrEmpty())
+                if (task.nodes is {Count: > 0})
                 {
                     var otherNode = task.nodes[0];
                     var p0 = new Vector2(otherNode.rect.center.x - 4 + 5, otherNode.rect.yMin + 8 + 5);
