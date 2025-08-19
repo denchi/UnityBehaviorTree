@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Reflection;
 using Behaviours.BT.Runtime;
 using UnityEditor;
@@ -315,8 +316,14 @@ namespace Behaviours.BT.Editor
 
                         menu.AddSeparator("");
 
-                        Type baseType = typeof(Task);
-                        Type[] types = Assembly.GetAssembly(baseType).GetTypes();
+                        var baseType = typeof(Task);
+                        
+                        // need all assemblies that contain tasks
+                        var types = AppDomain.CurrentDomain.GetAssemblies()
+                            .SelectMany(assembly => assembly.GetTypes())
+                            .Where(type => type.IsSubclassOf(baseType) && type != typeof(Task))
+                            .ToArray();
+                        
                         for (int i = 0; i < types.Length; ++i)
                         {
                             if (types[i].IsSubclassOf(baseType) && (types[i] != typeof(Composite)))
