@@ -1,6 +1,6 @@
 # Behaviour Tree
 
-Unity package that runs a ScriptableObject behaviour tree of tasks and services from a `Behaviour` component, and edits that tree in a node window. Shared variables come from the sibling [Behaviour Vars](https://github.com/denchi/UnityBehaviorVars) package.
+Behaviour Tree runs ScriptableObject tasks and services from a `Behaviour` component and provides a node editor for authoring trees. It uses the sibling [Behaviour Vars](https://github.com/denchi/UnityBehaviorVars) package for shared values.
 
 Package id: `com.deathbygravitystudio.behaviour.tree` (0.1.0). Display name: **Behaviour Tree**. Runtime assembly: `Behaviour.Tree`. Editor assembly: `Behaviour.Tree.Editor`.
 
